@@ -2,9 +2,9 @@
   "name": "blog",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "src/app.js",
   "scripts": {
-    "start": "nodemon --inspect ./index.js",
+    "start": "nodemon --inspect src/app.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -12,9 +12,10 @@
     "url": "git+https://github.com/cvukxwhoo/nodejs_f8_blog.git"
   },
   "keywords": [
-    "nodejs",
     "f8",
-    "blog"
+    "blog",
+    "f8",
+    "nodejs"
   ],
   "author": "cvukxwho",
   "license": "ISC",
@@ -23,9 +24,11 @@
   },
   "homepage": "https://github.com/cvukxwhoo/nodejs_f8_blog#readme",
   "dependencies": {
-    "express": "^4.18.2"
+    "express": "^4.18.2",
+    "express-handlebars": "^7.1.2"
   },
   "devDependencies": {
+    "morgan": "^1.10.0",
     "nodemon": "^3.0.1"
   }
 }
