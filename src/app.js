@@ -1,21 +1,20 @@
-const morgan = require('morgan');
-const app = express();
+const morgan = require("morgan");
 const port = 3000;
+const express = require("express");
+const engine = require("express-handlebars");
 
-import express from 'express';
-import { engine } from 'express-handlebars';
-
+const app = express();
 // HTTP logger
-app.use(morgan('combined'));
+app.use(morgan("combined"));
 
 // Template engine
-app.engine('handlebars', engine());
-app.set('view engine', 'handlebars');
-app.set('views', '.resources/views');
+app.engine("handlebars", engine());
+app.set("view engine", "handlebars");
+app.set("views", ".resources/views");
 
 // route
-app.get('/', (req, res) => {
-  res.send('home');
+app.get("/", (req, res) => {
+  res.send("home");
 });
 
 app.listen(port, () => {
